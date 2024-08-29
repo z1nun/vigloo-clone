@@ -1,0 +1,20 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json", /* Recommended React Native TSConfig base */
+  "compilerOptions": {
+    "baseUrl": "./app",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@screens/*": [
+        "screens/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+    } /* Skip type checking all .d.ts files. */
+  }
+}

@@ -1,0 +1,89 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+// import type {PropsWithChildren} from 'react';
+import Signup from './screens/Signup';
+// import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
+
+// import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {enableScreens} from 'react-native-screens';
+enableScreens();
+
+const Stack = createNativeStackNavigator();
+
+// type SectionProps = PropsWithChildren<{
+//   title: string;
+// }>;
+
+// function Section({children, title}: SectionProps): React.JSX.Element {
+//   const isDarkMode = useColorScheme() === 'dark';
+//   return (
+//     <View style={styles.sectionContainer}>
+//       <Text
+//         style={[
+//           styles.sectionTitle,
+//           {
+//             color: isDarkMode ? Colors.white : Colors.black,
+//           },
+//         ]}>
+//         {title}
+//       </Text>
+//       <Text
+//         style={[
+//           styles.sectionDescription,
+//           {
+//             color: isDarkMode ? Colors.light : Colors.dark,
+//           },
+//         ]}>
+//         {children}
+//       </Text>
+//     </View>
+//   );
+// }
+
+function App(): React.JSX.Element {
+  // const isDarkMode = useColorScheme() === 'dark';
+
+  // const backgroundStyle = {
+  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  // };
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Signup"
+          component={Signup} // HomeScreen이 올바르게 전달되었는지 확인
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+// const styles = StyleSheet.create({
+//   sectionContainer: {
+//     marginTop: 32,
+//     paddingHorizontal: 24,
+//   },
+//   sectionTitle: {
+//     fontSize: 24,
+//     fontWeight: '600',
+//   },
+//   sectionDescription: {
+//     marginTop: 8,
+//     fontSize: 18,
+//     fontWeight: '400',
+//   },
+//   highlight: {
+//     fontWeight: '700',
+//   },
+// });
+// 이렇게 하면 오류가 발생합니다.
+
+export default App;
