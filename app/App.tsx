@@ -9,6 +9,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // import type {PropsWithChildren} from 'react';
 import Signup from './screens/Signup';
+import Guest from './screens/Guest';
 // import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 
 // import {Colors} from 'react-native/Libraries/NewAppScreen';
@@ -57,10 +58,8 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
-          name="Signup"
-          component={Signup} // HomeScreen이 올바르게 전달되었는지 확인
-        />
+        <Stack.Screen name="Signup" component={Signup} />
+        <Stack.Screen name="Guest" component={Guest} />
       </Stack.Navigator>
     </NavigationContainer>
   );
